@@ -13,13 +13,8 @@ CMake Error at CMakeLists.txt:1 (cmake_minimum_required):
 
 
 
-CMake Error: CMake was unable to find a build program corresponding to "Unix Makefiles".  CMAKE_MAKE_PROGRAM is not set.  You probably need to select a different build tool.
-CMake Error: CMAKE_C_COMPILER not set, after EnableLanguage
-CMake Error: CMAKE_CXX_COMPILER not set, after EnableLanguage
--- Configuring incomplete, errors occurred!
-
-
-
+--------------------------------------------------
+.
 -- The C compiler identification is GNU 11.4.0
 -- The CXX compiler identification is GNU 11.4.0
 -- Check for working C compiler: /usr/bin/cc
@@ -34,14 +29,13 @@ CMake Error: CMAKE_CXX_COMPILER not set, after EnableLanguage
 -- Detecting CXX compiler ABI info - done
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
-CMake Error at CMakeLists.txt:13 (include):
-  include could not find load file:
-
-    kivicommon
-
-
+-- USTL is not being used
 -- Checking monotonic clock availability
+-- Performing Test HAVE_MONOTONIC_CLOCK
+-- Performing Test HAVE_MONOTONIC_CLOCK - Success
    -->Monotonic Clock available
+-- Performing Test PRCTL_SUID_DUMPABLE
+-- Performing Test PRCTL_SUID_DUMPABLE - Success
 -- Looking for pthread.h
 CMake Warning (dev) at /usr/local/share/cmake-3.13/Modules/CheckIncludeFile.cmake:70 (message):
   Policy CMP0075 is not set: Include file check macros honor
@@ -62,22 +56,10 @@ This warning is for project developers.  Use -Wno-dev to suppress it.
 -- Looking for pthread.h - found
 -- Looking for pthread_create
 -- Looking for pthread_create - found
-CMake Warning at logger/CMakeLists.txt:6 (find_package):
-  By not providing "FindDlt.cmake" in CMAKE_MODULE_PATH this project has
-  asked CMake to find a package configuration file provided by "Dlt", but
-  CMake did not find one.
-
-  Could not find a package configuration file provided by "Dlt" with any of
-  the following names:
-
-    DltConfig.cmake
-    dlt-config.cmake
-
-  Add the installation prefix of "Dlt" to CMAKE_PREFIX_PATH or set "Dlt_DIR"
-  to a directory containing one of the above files.  If "Dlt" provides a
-  separate development package or SDK, be sure it has been installed.
-
-
+-- Found Threads: TRUE  
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") 
+-- Checking for module 'automotive-dlt'
+--   No package 'automotive-dlt' found
 CMake Error at CMakeLists.txt:222 (install):
   install TARGETS given no LIBRARY DESTINATION for shared library target
   "kivicore".
@@ -86,16 +68,15 @@ CMake Error at CMakeLists.txt:222 (install):
 CMake Error: The following variables are used in this project, but they are set to NOTFOUND.
 Please set them or make sure they are set and tested correctly in the CMake files:
 DLT_INCLUDE_DIR (ADVANCED)
-   used as include directory in directory /home/subramd/kivi/src/kivicore
-   used as include directory in directory /home/subramd/kivi/src/kivicore
-   used as include directory in directory /home/subramd/kivi/src/kivicore
-   used as include directory in directory /home/subramd/kivi/src/kivicore
-   used as include directory in directory /home/subramd/kivi/src/kivicore
-   used as include directory in directory /home/subramd/kivi/src/kivicore
-   used as include directory in directory /home/subramd/kivi/src/kivicore
+   used as include directory in directory /home/subramd/kivi/kivi/src/kivicore
+   used as include directory in directory /home/subramd/kivi/kivi/src/kivicore
+   used as include directory in directory /home/subramd/kivi/kivi/src/kivicore
+   used as include directory in directory /home/subramd/kivi/kivi/src/kivicore
+   used as include directory in directory /home/subramd/kivi/kivi/src/kivicore
+   used as include directory in directory /home/subramd/kivi/kivi/src/kivicore
+   used as include directory in directory /home/subramd/kivi/kivi/src/kivicore
 DLT_LIBRARY (ADVANCED)
-    linked by target "kivicore" in directory /home/subramd/kivi/src/kivicore
+    linked by target "kivicore" in directory /home/subramd/kivi/kivi/src/kivicore
 
 -- Configuring incomplete, errors occurred!
-See also "/home/subramd/kivi/src/kivicore/build/x86_64/CMakeFiles/CMakeOutput.log"
-
+See also "/home/subramd/kivi/kivi/src/kivicore/build/x86_64/CMakeFiles/CMakeOutput.log".
