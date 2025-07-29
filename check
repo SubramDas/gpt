@@ -1,13 +1,125 @@
-on running cmake .. -DCMAKE_INSTALL_PREFIX=$SYSROOT/usr -DCMAKE_SYSROOT=$SYSROOT
+ cmake -DCMAKE_INSTALL_PREFIX:PATH=$HOME/sysroots/x86_64 -DWITH_USTL=0 -DPLATFORM=X86HOST -DWITH_TESTS=0 -DWITH
+_KUPNP=1 -DWITH_NETUTIL=1 -DWITH_USB=1 -DWITH_SYSUTIL=1 ../..
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc - works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ - works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- USTL is not being used
+-- Found kivi.h at /home/subramd/sysroots/x86_64/usr/include/kivi
+-- Found the kivi libraries at 
+-- Found the kivi headers at /home/subramd/sysroots/x86_64/usr/include/kivi
+-- KIVI Core definition found
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found kivi.h at /home/subramd/sysroots/x86_64/usr/include/kivi
+-- Found the kivi libraries at 
+-- Found the kivi headers at /home/subramd/sysroots/x86_64/usr/include/kivi
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") 
+-- Checking for module 'libupnp'
+--   Found libupnp, version 1.8.4
+-- Found the upnp libraries at -pthread;-lupnp;-lixml
+-- Found the upnp headers at /usr/include
+-- upnp definitions -pthread
+-- Looking for libusb-0.1
+-- libusb-0.1 : not found
+-- Looking for libusb-1.0
+-- libusb-1.0 : found
+-- Found the libusb-1.0 library path at /usr/lib/x86_64-linux-gnu
+-- Found the libusb-1.0 headers at /usr/include/libusb-1.0
+-- Found the libusb-1.0 library at /usr/lib/x86_64-linux-gnu/libusb-1.0.so
+-- Could not find websocket
+-- Configuring done
+CMake Error: The following variables are used in this project, but they are set to NOTFOUND.
+Please set them or make sure they are set and tested correctly in the CMake files:
+CCF_BASE_LIB (ADVANCED)
+    linked by target "kxframework" in directory /home/subramd/kivi/src/kxframework
+WEBSOCKET_INC_DIR (ADVANCED)
+   used as include directory in directory /home/subramd/kivi/src/kxframework
+   used as include directory in directory /home/subramd/kivi/src/kxframework
+   used as include directory in directory /home/subramd/kivi/src/kxframework
+   used as include directory in directory /home/subramd/kivi/src/kxframework
+   used as include directory in directory /home/subramd/kivi/src/kxframework
+   used as include directory in directory /home/subramd/kivi/src/kxframework
+   used as include directory in directory /home/subramd/kivi/src/kxframework
+   used as include directory in directory /home/subramd/kivi/src/kxframework/text
+   used as include directory in directory /home/subramd/kivi/src/kxframework/text
+   used as include directory in directory /home/subramd/kivi/src/kxframework/text
+   used as include directory in directory /home/subramd/kivi/src/kxframework/text
+   used as include directory in directory /home/subramd/kivi/src/kxframework/text
+   used as include directory in directory /home/subramd/kivi/src/kxframework/text
+   used as include directory in directory /home/subramd/kivi/src/kxframework/sysutils
+   used as include directory in directory /home/subramd/kivi/src/kxframework/sysutils
+   used as include directory in directory /home/subramd/kivi/src/kxframework/sysutils
+   used as include directory in directory /home/subramd/kivi/src/kxframework/sysutils
+   used as include directory in directory /home/subramd/kivi/src/kxframework/sysutils
+   used as include directory in directory /home/subramd/kivi/src/kxframework/sysutils
+   used as include directory in directory /home/subramd/kivi/src/kxframework/net
+   used as include directory in directory /home/subramd/kivi/src/kxframework/net
+   used as include directory in directory /home/subramd/kivi/src/kxframework/net
+   used as include directory in directory /home/subramd/kivi/src/kxframework/net
+   used as include directory in directory /home/subramd/kivi/src/kxframework/net
+   used as include directory in directory /home/subramd/kivi/src/kxframework/net
+   used as include directory in directory /home/subramd/kivi/src/kxframework/kupnp
+   used as include directory in directory /home/subramd/kivi/src/kxframework/kupnp
+   used as include directory in directory /home/subramd/kivi/src/kxframework/kupnp
+   used as include directory in directory /home/subramd/kivi/src/kxframework/kupnp
+   used as include directory in directory /home/subramd/kivi/src/kxframework/kupnp
+   used as include directory in directory /home/subramd/kivi/src/kxframework/kupnp
+   used as include directory in directory /home/subramd/kivi/src/kxframework/usb
+   used as include directory in directory /home/subramd/kivi/src/kxframework/usb
+   used as include directory in directory /home/subramd/kivi/src/kxframework/usb
+   used as include directory in directory /home/subramd/kivi/src/kxframework/usb
+   used as include directory in directory /home/subramd/kivi/src/kxframework/usb
+   used as include directory in directory /home/subramd/kivi/src/kxframework/usb
+   used as include directory in directory /home/subramd/kivi/src/kxframework/serial
+   used as include directory in directory /home/subramd/kivi/src/kxframework/serial
+   used as include directory in directory /home/subramd/kivi/src/kxframework/serial
+   used as include directory in directory /home/subramd/kivi/src/kxframework/serial
+   used as include directory in directory /home/subramd/kivi/src/kxframework/serial
+   used as include directory in directory /home/subramd/kivi/src/kxframework/serial
 
-CMake Error at /usr/local/share/cmake-3.17/Modules/FindPackageHandleStandardArgs.cmake:164 (message):
-  Could NOT find Threads (missing: Threads_FOUND)
-Call Stack (most recent call first):
-  /usr/local/share/cmake-3.17/Modules/FindPackageHandleStandardArgs.cmake:445 (_FPHSA_FAILURE_MESSAGE)
-  /usr/local/share/cmake-3.17/Modules/FindThreads.cmake:234 (FIND_PACKAGE_HANDLE_STANDARD_ARGS)
-  CMakeLists.txt:135 (find_package)
+CMake Warning (dev) in CMakeLists.txt:
+  Policy CMP0021 is not set: Fatal error on relative paths in
+  INCLUDE_DIRECTORIES target property.  Run "cmake --help-policy CMP0021" for
+  policy details.  Use the cmake_policy command to set the policy and
+  suppress this warning.
+
+  Found relative path while evaluating include directories of "kxframework":
+
+    "WEBSOCKET_INC_DIR-NOTFOUND"
+
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in CMakeLists.txt:
+  Policy CMP0021 is not set: Fatal error on relative paths in
+  INCLUDE_DIRECTORIES target property.  Run "cmake --help-policy CMP0021" for
+  policy details.  Use the cmake_policy command to set the policy and
+  suppress this warning.
+
+  Found relative path while evaluating include directories of "kxframework":
+
+    "WEBSOCKET_INC_DIR-NOTFOUND"
+
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Generating done
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    WITH_SYSUTIL
 
 
--- Configuring incomplete, errors occurred!
-See also "/home/subramd/Desktop/kivi/src/dlt-daemon-master/build/CMakeFiles/CMakeOutput.log".
-See also "/home/subramd/Desktop/kivi/src/dlt-daemon-master/build/CMakeFiles/CMakeError.log".
+CMake Generate step failed.  Build files cannot be regenerated correctly.
