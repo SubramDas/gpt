@@ -1,105 +1,663 @@
-[ 67%] Building C object lib/CMakeFiles/websockets.dir/core-net/client/conmon.c.o
-[ 68%] Building C object lib/CMakeFiles/websockets.dir/roles/http/date.c.o
-[ 68%] Building C object lib/CMakeFiles/websockets.dir/roles/http/header.c.o
-[ 68%] Building C object lib/CMakeFiles/websockets.dir/roles/http/parsers.c.o
-[ 69%] Building C object lib/CMakeFiles/websockets.dir/roles/http/server/server.c.o
-In file included from /home/subramd/Desktop/kivi/src/libwebsockets/include/libwebsockets.h:582,
-                 from /home/subramd/Desktop/kivi/src/libwebsockets/lib/core/./private-lib-core.h:140,
-                 from /home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:31:
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c: In function ‘_lws_routing_table_dump’:
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:69:52: error: ‘struct lws_context’ has no member named ‘routing_table’
-   69 |                               lws_dll2_get_head(&cx->routing_table)) {
-      |                                                    ^~
-/home/subramd/Desktop/kivi/src/libwebsockets/include/libwebsockets/lws-dll2.h:296:25: note: in definition of macro ‘lws_start_foreach_dll’
-  296 |         ___type ___it = ___start; \
-      |                         ^~~~~~~~
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c: In function ‘_lws_route_get_uidx’:
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:101:16: error: ‘struct lws_context’ has no member named ‘route_uidx’
-  101 |         if (!cx->route_uidx)
-      |                ^~
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:102:19: error: ‘struct lws_context’ has no member named ‘route_uidx’
-  102 |                 cx->route_uidx++;
-      |                   ^~
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:104:16: error: ‘struct lws_context’ has no member named ‘route_uidx’
-  104 |         ou = cx->route_uidx;
-      |                ^~
-[ 69%] Building C object lib/CMakeFiles/websockets.dir/roles/http/server/lws-spa.c.o
-In file included from /home/subramd/Desktop/kivi/src/libwebsockets/include/libwebsockets.h:582,
-                 from /home/subramd/Desktop/kivi/src/libwebsockets/lib/core/./private-lib-core.h:140,
-                 from /home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:31:
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:112:60: error: ‘struct lws_context’ has no member named ‘routing_table’
-  112 |                                       lws_dll2_get_head(&cx->routing_table)) {
+[  7%] Building CXX object CMakeFiles/kxframework.dir/kupnp/upnpmanager.cpp.o
+[ 11%] Building CXX object CMakeFiles/kxframework.dir/kupnp/upnpmanagerimpl.cpp.o
+[ 14%] Building CXX object CMakeFiles/kxframework.dir/kupnp/upnpeventlogger.cpp.o
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp: In member function ‘void UPnPEventLogger::LogEvent(Upnp_EventType, void*)’:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:104:83: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Discovery’
+  104 |                 LOG5((TEXT("ErrCode     =  %s(%d)\n"), UpnpGetErrorMessage(d_event->ErrCode), d_event->ErrCode));
+      |                                                                                   ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:102:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Discovery’
+  102 |                 struct Upnp_Discovery *d_event = (struct Upnp_Discovery *)event;
+      |                        ^~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:104:102: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Discovery’
+  104 |                 LOG5((TEXT("ErrCode     =  %s(%d)\n"), UpnpGetErrorMessage(d_event->ErrCode), d_event->ErrCode));
+      |                                                                                                      ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:102:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Discovery’
+  102 |                 struct Upnp_Discovery *d_event = (struct Upnp_Discovery *)event;
+      |                        ^~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:105:60: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Discovery’
+  105 |                 LOG5((TEXT("Expires     =  %d\n"),  d_event->Expires));
       |                                                            ^~
-/home/subramd/Desktop/kivi/src/libwebsockets/include/libwebsockets/lws-dll2.h:296:25: note: in definition of macro ‘lws_start_foreach_dll’
-  296 |         ___type ___it = ___start; \
-      |                         ^~~~~~~~
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:115:44: error: ‘struct lws_context’ has no member named ‘route_uidx’
-  115 |                         if (rou->uidx == cx->route_uidx) {
-      |                                            ^~
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:117:35: error: ‘struct lws_context’ has no member named ‘route_uidx’
-  117 |                                 cx->route_uidx++;
-      |                                   ^~
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:118:40: error: ‘struct lws_context’ has no member named ‘route_uidx’
-  118 |                                 if (!cx->route_uidx)
-      |                                        ^~
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:119:43: error: ‘struct lws_context’ has no member named ‘route_uidx’
-  119 |                                         cx->route_uidx++;
-      |                                           ^~
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:120:39: error: ‘struct lws_context’ has no member named ‘route_uidx’
-  120 |                                 if (cx->route_uidx == ou) {
-      |                                       ^~
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:130:34: error: ‘struct lws_context’ has no member named ‘route_uidx’
-  130 |                         return cx->route_uidx++;
-      |                                  ^~
-In file included from /home/subramd/Desktop/kivi/src/libwebsockets/include/libwebsockets.h:582,
-                 from /home/subramd/Desktop/kivi/src/libwebsockets/lib/core/./private-lib-core.h:140,
-                 from /home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:31:
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c: In function ‘_lws_route_remove’:
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:138:61: error: ‘struct lws_context’ has no member named ‘routing_table’
-  138 |                               lws_dll2_get_head(&pt->context->routing_table)) {
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:102:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Discovery’
+  102 |                 struct Upnp_Discovery *d_event = (struct Upnp_Discovery *)event;
+      |                        ^~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:106:60: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Discovery’
+  106 |                 LOG5((TEXT("DeviceId    =  %s\n"),  d_event->DeviceId));
+      |                                                            ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:102:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Discovery’
+  102 |                 struct Upnp_Discovery *d_event = (struct Upnp_Discovery *)event;
+      |                        ^~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:107:60: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Discovery’
+  107 |                 LOG5((TEXT("DeviceType  =  %s\n"),  d_event->DeviceType));
+      |                                                            ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:102:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Discovery’
+  102 |                 struct Upnp_Discovery *d_event = (struct Upnp_Discovery *)event;
+      |                        ^~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:108:60: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Discovery’
+  108 |                 LOG5((TEXT("ServiceType =  %s\n"),  d_event->ServiceType));
+      |                                                            ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:102:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Discovery’
+  102 |                 struct Upnp_Discovery *d_event = (struct Upnp_Discovery *)event;
+      |                        ^~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:109:60: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Discovery’
+  109 |                 LOG5((TEXT("ServiceVer  =  %s\n"),  d_event->ServiceVer));
+      |                                                            ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:102:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Discovery’
+  102 |                 struct Upnp_Discovery *d_event = (struct Upnp_Discovery *)event;
+      |                        ^~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:110:60: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Discovery’
+  110 |                 LOG5((TEXT("Location    =  %s\n"),  d_event->Location));
+      |                                                            ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:102:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Discovery’
+  102 |                 struct Upnp_Discovery *d_event = (struct Upnp_Discovery *)event;
+      |                        ^~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:111:60: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Discovery’
+  111 |                 LOG5((TEXT("OS          =  %s\n"),  d_event->Os));
+      |                                                            ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:102:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Discovery’
+  102 |                 struct Upnp_Discovery *d_event = (struct Upnp_Discovery *)event;
+      |                        ^~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:112:60: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Discovery’
+  112 |                 LOG5((TEXT("Ext         =  %s\n"),  d_event->Ext));
+      |                                                            ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:102:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Discovery’
+  102 |                 struct Upnp_Discovery *d_event = (struct Upnp_Discovery *)event;
+      |                        ^~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:123:83: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Request’
+  123 |                 LOG5((TEXT("ErrCode     =  %s(%d)\n"), UpnpGetErrorMessage(a_event->ErrCode), a_event->ErrCode));
+      |                                                                                   ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:120:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Request’
+  120 |                 struct Upnp_Action_Request *a_event = (struct Upnp_Action_Request *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:123:102: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Request’
+  123 |                 LOG5((TEXT("ErrCode     =  %s(%d)\n"), UpnpGetErrorMessage(a_event->ErrCode), a_event->ErrCode));
+      |                                                                                                      ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:120:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Request’
+  120 |                 struct Upnp_Action_Request *a_event = (struct Upnp_Action_Request *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:124:59: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Request’
+  124 |                 LOG5((TEXT("ErrStr      =  %s\n"), a_event->ErrStr));
+      |                                                           ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:120:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Request’
+  120 |                 struct Upnp_Action_Request *a_event = (struct Upnp_Action_Request *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:125:59: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Request’
+  125 |                 LOG5((TEXT("ActionName  =  %s\n"), a_event->ActionName));
+      |                                                           ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:120:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Request’
+  120 |                 struct Upnp_Action_Request *a_event = (struct Upnp_Action_Request *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:126:59: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Request’
+  126 |                 LOG5((TEXT("UDN         =  %s\n"), a_event->DevUDN));
+      |                                                           ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:120:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Request’
+  120 |                 struct Upnp_Action_Request *a_event = (struct Upnp_Action_Request *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:127:59: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Request’
+  127 |                 LOG5((TEXT("ServiceID   =  %s\n"), a_event->ServiceID));
+      |                                                           ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:120:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Request’
+  120 |                 struct Upnp_Action_Request *a_event = (struct Upnp_Action_Request *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:128:28: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Request’
+  128 |                 if (a_event->ActionRequest) {
+      |                            ^~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:120:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Request’
+  120 |                 struct Upnp_Action_Request *a_event = (struct Upnp_Action_Request *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:129:69: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Request’
+  129 |                         xmlbuff = ixmlPrintNode((IXML_Node *)a_event->ActionRequest);
+      |                                                                     ^~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:120:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Request’
+  120 |                 struct Upnp_Action_Request *a_event = (struct Upnp_Action_Request *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:138:28: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Request’
+  138 |                 if (a_event->ActionResult) {
+      |                            ^~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:120:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Request’
+  120 |                 struct Upnp_Action_Request *a_event = (struct Upnp_Action_Request *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:139:69: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Request’
+  139 |                         xmlbuff = ixmlPrintNode((IXML_Node *)a_event->ActionResult);
+      |                                                                     ^~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:120:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Request’
+  120 |                 struct Upnp_Action_Request *a_event = (struct Upnp_Action_Request *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:154:83: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Complete’
+  154 |                 LOG4((TEXT("ErrCode     =  %s(%d)\n"), UpnpGetErrorMessage(a_event->ErrCode), a_event->ErrCode));
+      |                                                                                   ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:380:111: note: in definition of macro ‘LOG4’
+  380 |                 ((void)((GetLogLevel()&LEVEL4)? logwithheader(__FILE__, __func__,__LINE__, "4", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:151:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Complete’
+  151 |                 struct Upnp_Action_Complete *a_event = (struct Upnp_Action_Complete *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:154:102: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Complete’
+  154 |                 LOG4((TEXT("ErrCode     =  %s(%d)\n"), UpnpGetErrorMessage(a_event->ErrCode), a_event->ErrCode));
+      |                                                                                                      ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:380:111: note: in definition of macro ‘LOG4’
+  380 |                 ((void)((GetLogLevel()&LEVEL4)? logwithheader(__FILE__, __func__,__LINE__, "4", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:151:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Complete’
+  151 |                 struct Upnp_Action_Complete *a_event = (struct Upnp_Action_Complete *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:155:59: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Complete’
+  155 |                 LOG4((TEXT("CtrlUrl     =  %s\n"), a_event->CtrlUrl));
+      |                                                           ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:380:111: note: in definition of macro ‘LOG4’
+  380 |                 ((void)((GetLogLevel()&LEVEL4)? logwithheader(__FILE__, __func__,__LINE__, "4", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:151:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Complete’
+  151 |                 struct Upnp_Action_Complete *a_event = (struct Upnp_Action_Complete *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:156:28: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Complete’
+  156 |                 if (a_event->ActionRequest) {
+      |                            ^~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:151:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Complete’
+  151 |                 struct Upnp_Action_Complete *a_event = (struct Upnp_Action_Complete *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:157:69: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Complete’
+  157 |                         xmlbuff = ixmlPrintNode((IXML_Node *)a_event->ActionRequest);
+      |                                                                     ^~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:151:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Complete’
+  151 |                 struct Upnp_Action_Complete *a_event = (struct Upnp_Action_Complete *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:166:28: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Complete’
+  166 |                 if (a_event->ActionResult) {
+      |                            ^~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:151:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Complete’
+  151 |                 struct Upnp_Action_Complete *a_event = (struct Upnp_Action_Complete *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:167:69: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Complete’
+  167 |                         xmlbuff = ixmlPrintNode((IXML_Node *)a_event->ActionResult);
+      |                                                                     ^~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:151:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Action_Complete’
+  151 |                 struct Upnp_Action_Complete *a_event = (struct Upnp_Action_Complete *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:182:84: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_State_Var_Request’
+  182 |                 LOG5((TEXT("ErrCode     =  %s(%d)\n"), UpnpGetErrorMessage(sv_event->ErrCode), sv_event->ErrCode));
+      |                                                                                    ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:179:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_State_Var_Request’
+  179 |                 struct Upnp_State_Var_Request *sv_event =
+      |                        ^~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:182:104: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_State_Var_Request’
+  182 |                 LOG5((TEXT("ErrCode     =  %s(%d)\n"), UpnpGetErrorMessage(sv_event->ErrCode), sv_event->ErrCode));
+      |                                                                                                        ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:179:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_State_Var_Request’
+  179 |                 struct Upnp_State_Var_Request *sv_event =
+      |                        ^~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:183:60: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_State_Var_Request’
+  183 |                 LOG5((TEXT("ErrStr      =  %s\n"), sv_event->ErrStr));
+      |                                                            ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:179:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_State_Var_Request’
+  179 |                 struct Upnp_State_Var_Request *sv_event =
+      |                        ^~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:184:60: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_State_Var_Request’
+  184 |                 LOG5((TEXT("UDN         =  %s\n"), sv_event->DevUDN));
+      |                                                            ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:179:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_State_Var_Request’
+  179 |                 struct Upnp_State_Var_Request *sv_event =
+      |                        ^~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:185:60: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_State_Var_Request’
+  185 |                 LOG5((TEXT("ServiceID   =  %s\n"), sv_event->ServiceID));
+      |                                                            ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:179:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_State_Var_Request’
+  179 |                 struct Upnp_State_Var_Request *sv_event =
+      |                        ^~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:186:60: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_State_Var_Request’
+  186 |                 LOG5((TEXT("StateVarName=  %s\n"), sv_event->StateVarName));
+      |                                                            ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:179:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_State_Var_Request’
+  179 |                 struct Upnp_State_Var_Request *sv_event =
+      |                        ^~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:187:60: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_State_Var_Request’
+  187 |                 LOG5((TEXT("CurrentVal  =  %s\n"), sv_event->CurrentVal));
+      |                                                            ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:179:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_State_Var_Request’
+  179 |                 struct Upnp_State_Var_Request *sv_event =
+      |                        ^~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:193:84: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_State_Var_Complete’
+  193 |                 LOG5((TEXT("ErrCode     =  %s(%d)\n"), UpnpGetErrorMessage(sv_event->ErrCode), sv_event->ErrCode));
+      |                                                                                    ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:191:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_State_Var_Complete’
+  191 |                 struct Upnp_State_Var_Complete *sv_event = (struct Upnp_State_Var_Complete *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:193:104: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_State_Var_Complete’
+  193 |                 LOG5((TEXT("ErrCode     =  %s(%d)\n"), UpnpGetErrorMessage(sv_event->ErrCode), sv_event->ErrCode));
+      |                                                                                                        ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:191:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_State_Var_Complete’
+  191 |                 struct Upnp_State_Var_Complete *sv_event = (struct Upnp_State_Var_Complete *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:194:60: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_State_Var_Complete’
+  194 |                 LOG5((TEXT("CtrlUrl     =  %s\n"), sv_event->CtrlUrl));
+      |                                                            ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:191:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_State_Var_Complete’
+  191 |                 struct Upnp_State_Var_Complete *sv_event = (struct Upnp_State_Var_Complete *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:195:60: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_State_Var_Complete’
+  195 |                 LOG5((TEXT("StateVarName=  %s\n"), sv_event->StateVarName));
+      |                                                            ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:191:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_State_Var_Complete’
+  191 |                 struct Upnp_State_Var_Complete *sv_event = (struct Upnp_State_Var_Complete *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:196:60: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_State_Var_Complete’
+  196 |                 LOG5((TEXT("CurrentVal  =  %s\n"), sv_event->CurrentVal));
+      |                                                            ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:191:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_State_Var_Complete’
+  191 |                 struct Upnp_State_Var_Complete *sv_event = (struct Upnp_State_Var_Complete *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:203:60: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Subscription_Request’
+  203 |                 LOG5((TEXT("ServiceID   =  %s\n"), sr_event->ServiceId));
+      |                                                            ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:201:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Subscription_Request’
+  201 |                 struct Upnp_Subscription_Request *sr_event = (struct Upnp_Subscription_Request *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:204:60: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Subscription_Request’
+  204 |                 LOG5((TEXT("UDN         =  %s\n"), sr_event->UDN));
+      |                                                            ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:201:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Subscription_Request’
+  201 |                 struct Upnp_Subscription_Request *sr_event = (struct Upnp_Subscription_Request *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:205:60: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Subscription_Request’
+  205 |                 LOG5((TEXT("SID         =  %s\n"), sr_event->Sid));
+      |                                                            ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:201:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Subscription_Request’
+  201 |                 struct Upnp_Subscription_Request *sr_event = (struct Upnp_Subscription_Request *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:212:59: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event’
+  212 |                 LOG5((TEXT("SID         =  %s\n"), e_event->Sid));
+      |                                                           ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:209:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event’
+  209 |                 struct Upnp_Event *e_event = (struct Upnp_Event *)event;
+      |                        ^~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:213:64: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event’
+  213 |                 LOG5((TEXT("EventKey    =  %d\n"),      e_event->EventKey));
+      |                                                                ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:209:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event’
+  209 |                 struct Upnp_Event *e_event = (struct Upnp_Event *)event;
+      |                        ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:214:61: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event’
+  214 |                 xmlbuff = ixmlPrintNode((IXML_Node *)e_event->ChangedVariables);
       |                                                             ^~
-/home/subramd/Desktop/kivi/src/libwebsockets/include/libwebsockets/lws-dll2.h:285:25: note: in definition of macro ‘lws_start_foreach_dll_safe’
-  285 |         ___type ___it = ___start; \
-      |                         ^~~~~~~~
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c: In function ‘_lws_route_table_empty’:
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:171:66: error: ‘struct lws_context’ has no member named ‘routing_table’
-  171 |                                    lws_dll2_get_head(&pt->context->routing_table)) {
-      |                                                                  ^~
-/home/subramd/Desktop/kivi/src/libwebsockets/include/libwebsockets/lws-dll2.h:285:25: note: in definition of macro ‘lws_start_foreach_dll_safe’
-  285 |         ___type ___it = ___start; \
-      |                         ^~~~~~~~
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c: In function ‘_lws_route_table_ifdown’:
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:184:66: error: ‘struct lws_context’ has no member named ‘routing_table’
-  184 |                                    lws_dll2_get_head(&pt->context->routing_table)) {
-      |                                                                  ^~
-/home/subramd/Desktop/kivi/src/libwebsockets/include/libwebsockets/lws-dll2.h:285:25: note: in definition of macro ‘lws_start_foreach_dll_safe’
-  285 |         ___type ___it = ___start; \
-      |                         ^~~~~~~~
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c: In function ‘_lws_route_est_outgoing’:
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:216:61: error: ‘struct lws_context’ has no member named ‘routing_table’
-  216 |                               lws_dll2_get_head(&pt->context->routing_table)) {
-      |                                                             ^~
-/home/subramd/Desktop/kivi/src/libwebsockets/include/libwebsockets/lws-dll2.h:296:25: note: in definition of macro ‘lws_start_foreach_dll’
-  296 |         ___type ___it = ___start; \
-      |                         ^~~~~~~~
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c: In function ‘_lws_route_find_source’:
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:275:61: error: ‘struct lws_context’ has no member named ‘routing_table’
-  275 |                               lws_dll2_get_head(&pt->context->routing_table)) {
-      |                                                             ^~
-/home/subramd/Desktop/kivi/src/libwebsockets/include/libwebsockets/lws-dll2.h:296:25: note: in definition of macro ‘lws_start_foreach_dll’
-  296 |         ___type ___it = ___start; \
-      |                         ^~~~~~~~
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c: In function ‘_lws_route_pt_close_unroutable’:
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:344:25: error: ‘struct lws_context’ has no member named ‘nl_initial_done’
-  344 |         if (!pt->context->nl_initial_done
-      |                         ^~
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c: In function ‘_lws_route_pt_close_route_users’:
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:394:24: error: ‘struct lws’ has no member named ‘peer_route_uidx’
-  394 |                     wsi->peer_route_uidx == uidx) {
-      |                        ^~
-make[2]: *** [lib/CMakeFiles/websockets.dir/build.make:769: lib/CMakeFiles/websockets.dir/core-net/route.c.o] Error 1
-make[2]: *** Waiting for unfinished jobs....
-make[2]: Leaving directory '/home/subramd/Desktop/kivi/src/libwebsockets/build/x86_64'
-make[1]: *** [CMakeFiles/Makefile2:1417: lib/CMakeFiles/websockets.dir/all] Error 2
-make[1]: Leaving directory '/home/subramd/Desktop/kivi/src/libwebsockets/build/x86_64'
-make: *** [Makefile:180: all] Error 2
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:209:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event’
+  209 |                 struct Upnp_Event *e_event = (struct Upnp_Event *)event;
+      |                        ^~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:223:60: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event_Subscribe’
+  223 |                 LOG5((TEXT("SID         =  %s\n"), es_event->Sid));
+      |                                                            ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:221:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event_Subscribe’
+  221 |                 struct Upnp_Event_Subscribe *es_event = (struct Upnp_Event_Subscribe *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:224:84: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event_Subscribe’
+  224 |                 LOG5((TEXT("ErrCode     =  %s(%d)\n"), UpnpGetErrorMessage(es_event->ErrCode), es_event->ErrCode));
+      |                                                                                    ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:221:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event_Subscribe’
+  221 |                 struct Upnp_Event_Subscribe *es_event = (struct Upnp_Event_Subscribe *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:224:104: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event_Subscribe’
+  224 |                 LOG5((TEXT("ErrCode     =  %s(%d)\n"), UpnpGetErrorMessage(es_event->ErrCode), es_event->ErrCode));
+      |                                                                                                        ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:221:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event_Subscribe’
+  221 |                 struct Upnp_Event_Subscribe *es_event = (struct Upnp_Event_Subscribe *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:225:60: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event_Subscribe’
+  225 |                 LOG5((TEXT("TimeOut     =  %d\n"), es_event->TimeOut));
+      |                                                            ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:221:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event_Subscribe’
+  221 |                 struct Upnp_Event_Subscribe *es_event = (struct Upnp_Event_Subscribe *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:232:60: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event_Subscribe’
+  232 |                 LOG5((TEXT("SID         =  %s\n"), es_event->Sid));
+      |                                                            ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:230:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event_Subscribe’
+  230 |                 struct Upnp_Event_Subscribe *es_event = (struct Upnp_Event_Subscribe *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:233:84: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event_Subscribe’
+  233 |                 LOG5((TEXT("ErrCode     =  %s(%d)\n"), UpnpGetErrorMessage(es_event->ErrCode), es_event->ErrCode));
+      |                                                                                    ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:230:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event_Subscribe’
+  230 |                 struct Upnp_Event_Subscribe *es_event = (struct Upnp_Event_Subscribe *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:233:104: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event_Subscribe’
+  233 |                 LOG5((TEXT("ErrCode     =  %s(%d)\n"), UpnpGetErrorMessage(es_event->ErrCode), es_event->ErrCode));
+      |                                                                                                        ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:230:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event_Subscribe’
+  230 |                 struct Upnp_Event_Subscribe *es_event = (struct Upnp_Event_Subscribe *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:234:60: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event_Subscribe’
+  234 |                 LOG5((TEXT("PublisherURL=  %s\n"), es_event->PublisherUrl));
+      |                                                            ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:230:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event_Subscribe’
+  230 |                 struct Upnp_Event_Subscribe *es_event = (struct Upnp_Event_Subscribe *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:235:60: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event_Subscribe’
+  235 |                 LOG5((TEXT("TimeOut     =  %d\n"), es_event->TimeOut));
+      |                                                            ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:230:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event_Subscribe’
+  230 |                 struct Upnp_Event_Subscribe *es_event = (struct Upnp_Event_Subscribe *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:242:60: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event_Subscribe’
+  242 |                 LOG5((TEXT("SID         =  %s\n"), es_event->Sid));
+      |                                                            ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:240:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event_Subscribe’
+  240 |                 struct Upnp_Event_Subscribe *es_event = (struct Upnp_Event_Subscribe *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:243:84: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event_Subscribe’
+  243 |                 LOG5((TEXT("ErrCode     =  %s(%d)\n"), UpnpGetErrorMessage(es_event->ErrCode), es_event->ErrCode));
+      |                                                                                    ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:240:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event_Subscribe’
+  240 |                 struct Upnp_Event_Subscribe *es_event = (struct Upnp_Event_Subscribe *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:243:104: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event_Subscribe’
+  243 |                 LOG5((TEXT("ErrCode     =  %s(%d)\n"), UpnpGetErrorMessage(es_event->ErrCode), es_event->ErrCode));
+      |                                                                                                        ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:240:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event_Subscribe’
+  240 |                 struct Upnp_Event_Subscribe *es_event = (struct Upnp_Event_Subscribe *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:244:60: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event_Subscribe’
+  244 |                 LOG5((TEXT("PublisherURL=  %s\n"), es_event->PublisherUrl));
+      |                                                            ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:240:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event_Subscribe’
+  240 |                 struct Upnp_Event_Subscribe *es_event = (struct Upnp_Event_Subscribe *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~~
+In file included from /home/subramd/sysroots/x86_64/usr/include/kivi/osal/thread_lock.h:28,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.h:27,
+                 from /home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:22:
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:245:60: error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event_Subscribe’
+  245 |                 LOG5((TEXT("TimeOut     =  %d\n"), es_event->TimeOut));
+      |                                                            ^~
+/home/subramd/sysroots/x86_64/usr/include/kivi/logger.h:387:111: note: in definition of macro ‘LOG5’
+  387 |                 ((void)((GetLogLevel()&LEVEL5)? logwithheader(__FILE__, __func__,__LINE__, "5", "", STRINGIFY printf_exp), 1:0))
+      |                                                                                                               ^~~~~~~~~~
+/home/subramd/Desktop/kivi/src/kxframework/kupnp/upnpeventlogger.cpp:240:24: note: forward declaration of ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Event_Subscribe’
+  240 |                 struct Upnp_Event_Subscribe *es_event = (struct Upnp_Event_Subscribe *)event;
+      |                        ^~~~~~~~~~~~~~~~~~~~
+make[2]: *** [CMakeFiles/kxframework.dir/build.make:119: CMakeFiles/kxframework.dir/kupnp/upnpeventlogger.cpp.o] Error 1
+make[2]: Leaving directory '/home/subramd/Desktop/kivi/src/kxframework/build/x86_64'
+make[1]: *** [CMakeFiles/Makefile2:218: CMakeFiles/kxframework.dir/all] Error 2
+make[1]: Leaving directory '/home/subramd/Desktop/kivi/src/kxframework/build/x86_64'
+make: *** [Makefile:147: all] Error 2
