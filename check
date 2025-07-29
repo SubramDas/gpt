@@ -1,9 +1,5 @@
-on running make
-
-
-session.c.o
-[  9%] Building C object lib/CMakeFiles/websockets_shared.dir/tls/tls-server.c.o
-[ 10%] Building C object lib/CMakeFiles/websockets_shared.dir/tls/openssl/openssl-server.c.o
+[ 27%] Building C object lib/CMakeFiles/websockets.dir/core/lws_dll2.c.o
+[ 27%] Building C object lib/CMakeFiles/websockets.dir/core/lws_map.c.o
 /home/subramd/Desktop/kivi/src/libwebsockets/lib/tls/openssl/openssl-server.c: In function ‘lws_tls_server_certs_load’:
 /home/subramd/Desktop/kivi/src/libwebsockets/lib/tls/openssl/openssl-server.c:272:33: error: conversion from ‘long unsigned int’ to ‘int’ may change value [-Werror=conversion]
   272 |                                 (size_t)
@@ -39,8 +35,79 @@ session.c.o
   313 |                                                   flen);
       |                                                   ~~~~
 cc1: all warnings being treated as errors
-make[2]: *** [lib/CMakeFiles/websockets_shared.dir/build.make:288: lib/CMakeFiles/websockets_shared.dir/tls/openssl/openssl-server.c.o] Error 1
+make[2]: *** [lib/CMakeFiles/websockets.dir/build.make:288: lib/CMakeFiles/websockets.dir/tls/openssl/openssl-server.c.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/tls/openssl/openssl-client.c: In function ‘lws_ssl_client_bio_create’:
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/tls/openssl/openssl-client.c:438:41: error: conversion from ‘long unsigned int’ to ‘int’ may change value [-Werror=conversion]
+  438 |                                         (size_t)
+      |                                         ^~~~~~~~
+  439 | #else
+      | ~~~~~                                    
+  440 |                                         (int)
+      |                                         ~~~~~
+  441 | #endif
+      | ~~~~~~                                   
+  442 |                                         size) != 1) {
+      |                                         ~~~~
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/tls/openssl/openssl-client.c:468:41: error: conversion to ‘long int’ from ‘long unsigned int’ may change the sign of the result [-Werror=sign-conversion]
+  468 |                                         (size_t)
+      |                                         ^~~~~~~~
+  469 | #else
+      | ~~~~~                                    
+  470 |                                         (int)
+      |                                         ~~~~~
+  471 | #endif
+      | ~~~~~~                                   
+  472 |                                             size) != 1 &&
+      |                                             ~~~~
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/tls/openssl/openssl-client.c:479:41: error: conversion to ‘long int’ from ‘long unsigned int’ may change the sign of the result [-Werror=sign-conversion]
+  479 |                                         (size_t)
+      |                                         ^~~~~~~~
+  480 | #else
+      | ~~~~~                                    
+  481 |                                         (int)
+      |                                         ~~~~~
+  482 | #endif
+      | ~~~~~~                                   
+  483 |                                             size) != 1) {
+      |                                             ~~~~
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/tls/openssl/openssl-client.c: In function ‘lws_tls_client_create_vhost_context’:
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/tls/openssl/openssl-client.c:1066:33: error: conversion from ‘long unsigned int’ to ‘int’ may change value [-Werror=conversion]
+ 1066 |                                 (size_t)
+      |                                 ^~~~~~~~
+ 1067 | #else
+      | ~~~~~                            
+ 1068 |                                 (int)
+      |                                 ~~~~~
+ 1069 | #endif
+      | ~~~~~~                           
+ 1070 |                                 flen, p);
+      |                                 ~~~~
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/tls/openssl/openssl-client.c:1117:33: error: conversion to ‘long int’ from ‘long unsigned int’ may change the sign of the result [-Werror=sign-conversion]
+ 1117 |                                 (size_t)
+      |                                 ^~~~~~~~
+ 1118 | #else
+      | ~~~~~                            
+ 1119 |                                 (long)(lws_intptr_t)
+      |                                 ~~~~~~~~~~~~~~~~~~~~
+ 1120 | #endif
+      | ~~~~~~                           
+ 1121 |                                                 flen);
+      |                                                 ~~~~
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/tls/openssl/openssl-client.c:1126:33: error: conversion to ‘long int’ from ‘long unsigned int’ may change the sign of the result [-Werror=sign-conversion]
+ 1126 |                                 (size_t)
+      |                                 ^~~~~~~~
+ 1127 | #else
+      | ~~~~~                            
+ 1128 |                                 (long)(lws_intptr_t)
+      |                                 ~~~~~~~~~~~~~~~~~~~~
+ 1129 | #endif
+      | ~~~~~~                           
+ 1130 |                                                 flen);
+      |                                                 ~~~~
+cc1: all warnings being treated as errors
+make[2]: *** [lib/CMakeFiles/websockets.dir/build.make:314: lib/CMakeFiles/websockets.dir/tls/openssl/openssl-client.c.o] Error 1
 make[2]: Leaving directory '/home/subramd/Desktop/kivi/src/libwebsockets/build/x86_64'
-make[1]: *** [CMakeFiles/Makefile2:1390: lib/CMakeFiles/websockets_shared.dir/all] Error 2
+make[1]: *** [CMakeFiles/Makefile2:1417: lib/CMakeFiles/websockets.dir/all] Error 2
 make[1]: Leaving directory '/home/subramd/Desktop/kivi/src/libwebsockets/build/x86_64'
 make: *** [Makefile:180: all] Error 2
