@@ -1,3 +1,5 @@
+on running cmake .. -DCMAKE_INSTALL_PREFIX=$SYSROOT/usr -DCMAKE_SYSROOT=$SYSROOT
+
 CMake Error at /usr/local/share/cmake-3.17/Modules/FindPackageHandleStandardArgs.cmake:164 (message):
   Could NOT find Threads (missing: Threads_FOUND)
 Call Stack (most recent call first):
