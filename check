@@ -1,16 +1,42 @@
--- Compiled with LWS_WITH_DIR and LWS_WITH_LEJP_CONF
-Git commit hash: android-u-beta-1-gpl-1-gd41e3b28
-Compiling with SSL support
-CMake Error at /usr/local/share/cmake-3.17/Modules/FindPackageHandleStandardArgs.cmake:164 (message):
-  Could NOT find OpenSSL, try to set the path to OpenSSL root folder in the
-  system variable OPENSSL_ROOT_DIR (missing: OPENSSL_CRYPTO_LIBRARY
-  OPENSSL_INCLUDE_DIR)
-Call Stack (most recent call first):
-  /usr/local/share/cmake-3.17/Modules/FindPackageHandleStandardArgs.cmake:445 (_FPHSA_FAILURE_MESSAGE)
-  /usr/local/share/cmake-3.17/Modules/FindOpenSSL.cmake:450 (find_package_handle_standard_args)
-  lib/tls/CMakeLists.txt:265 (find_package)
-
-
--- Configuring incomplete, errors occurred!
-See also "/home/subramd/kivi/src/libwebsockets/build/x86_64/CMakeFiles/CMakeOutput.log".
-See also "/home/subramd/kivi/src/libwebsockets/build/x86_64/CMakeFiles/CMakeError.log".
+[  9%] Building C object lib/CMakeFiles/websockets_shared.dir/tls/tls-server.c.o
+[ 10%] Building C object lib/CMakeFiles/websockets_shared.dir/tls/openssl/openssl-server.c.o
+/home/subramd/kivi/src/libwebsockets/lib/tls/openssl/openssl-server.c: In function ‘lws_tls_server_certs_load’:
+/home/subramd/kivi/src/libwebsockets/lib/tls/openssl/openssl-server.c:272:33: error: conversion from ‘long unsigned int’ to ‘int’ may change value [-Werror=conversion]
+  272 |                                 (size_t)
+      |                                 ^~~~~~~~
+  273 | #else
+      | ~~~~~                            
+  274 |                                 (int)
+      |                                 ~~~~~
+  275 | #endif
+      | ~~~~~~                           
+  276 |                                 flen, p);
+      |                                 ~~~~
+/home/subramd/kivi/src/libwebsockets/lib/tls/openssl/openssl-server.c:300:25: error: conversion to ‘long int’ from ‘long unsigned int’ may change the sign of the result [-Werror=sign-conversion]
+  300 |                         (size_t)
+      |                         ^~~~~~~~
+  301 | #else
+      | ~~~~~                    
+  302 |                                           (long)(long long)
+      |                                           ~~~~~~~~~~~~~~~~~
+  303 | #endif
+      | ~~~~~~                   
+  304 |                                           flen);
+      |                                           ~~~~
+/home/subramd/kivi/src/libwebsockets/lib/tls/openssl/openssl-server.c:309:25: error: conversion to ‘long int’ from ‘long unsigned int’ may change the sign of the result [-Werror=sign-conversion]
+  309 |                         (size_t)
+      |                         ^~~~~~~~
+  310 | #else
+      | ~~~~~                    
+  311 |                                           (long)(long long)
+      |                                           ~~~~~~~~~~~~~~~~~
+  312 | #endif
+      | ~~~~~~                   
+  313 |                                                   flen);
+      |                                                   ~~~~
+cc1: all warnings being treated as errors
+make[2]: *** [lib/CMakeFiles/websockets_shared.dir/build.make:288: lib/CMakeFiles/websockets_shared.dir/tls/openssl/openssl-server.c.o] Error 1
+make[2]: Leaving directory '/home/subramd/kivi/src/libwebsockets/build/x86_64'
+make[1]: *** [CMakeFiles/Makefile2:1390: lib/CMakeFiles/websockets_shared.dir/all] Error 2
+make[1]: Leaving directory '/home/subramd/kivi/src/libwebsockets/build/x86_64'
+make: *** [Makefile:180: all] Error 2
