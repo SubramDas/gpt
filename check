@@ -1,28 +1,16 @@
-[ 60%] Built target kivicorelite
-make[2]: Entering directory '/home/subramd/kivi/src/kivicorelite/build2'
-Scanning dependencies of target dsa_tests
-make[2]: Leaving directory '/home/subramd/kivi/src/kivicorelite/build2'
-make[2]: Entering directory '/home/subramd/kivi/src/kivicorelite/build2'
-[ 63%] Building C object tests/CMakeFiles/dsa_tests.dir/integration/dsa_main.c.o
-[ 66%] Linking C executable dsa_tests
-/usr/bin/ld: ../libkivicorelite.a(logger.c.o): in function `_sub_I_00100_0':
-/home/subramd/kivi/src/kivicorelite/logger/logger.c:243: undefined reference to `__gcov_init'
-/usr/bin/ld: ../libkivicorelite.a(logger.c.o): in function `_sub_D_00100_1':
-/home/subramd/kivi/src/kivicorelite/logger/logger.c:243: undefined reference to `__gcov_exit'
-/usr/bin/ld: ../libkivicorelite.a(logger.c.o):(.data.rel+0x20): undefined reference to `__gcov_merge_add'
-/usr/bin/ld: ../libkivicorelite.a(pqueue.c.o): in function `_sub_I_00100_0':
-/home/subramd/kivi/src/kivicorelite/generic/pqueue.c:100: undefined reference to `__gcov_init'
-/usr/bin/ld: ../libkivicorelite.a(pqueue.c.o): in function `_sub_D_00100_1':
-/home/subramd/kivi/src/kivicorelite/generic/pqueue.c:100: undefined reference to `__gcov_exit'
-/usr/bin/ld: ../libkivicorelite.a(pqueue.c.o):(.data.rel+0x20): undefined reference to `__gcov_merge_add'
-/usr/bin/ld: ../libkivicorelite.a(heap.c.o): in function `_sub_I_00100_0':
-/home/subramd/kivi/src/kivicorelite/generic/heap.c:180: undefined reference to `__gcov_init'
-/usr/bin/ld: ../libkivicorelite.a(heap.c.o): in function `_sub_D_00100_1':
-/home/subramd/kivi/src/kivicorelite/generic/heap.c:180: undefined reference to `__gcov_exit'
-/usr/bin/ld: ../libkivicorelite.a(heap.c.o):(.data.rel+0x20): undefined reference to `__gcov_merge_add'
-collect2: error: ld returned 1 exit status
-make[2]: *** [tests/CMakeFiles/dsa_tests.dir/build.make:103: tests/dsa_tests] Error 1
-make[2]: Leaving directory '/home/subramd/kivi/src/kivicorelite/build2'
-make[1]: *** [CMakeFiles/Makefile2:144: tests/CMakeFiles/dsa_tests.dir/all] Error 2
-make[1]: Leaving directory '/home/subramd/kivi/src/kivicorelite/build2'
-make: *** [Makefile:147: all] Error 2
+-- Compiled with LWS_WITH_DIR and LWS_WITH_LEJP_CONF
+Git commit hash: android-u-beta-1-gpl-1-gd41e3b28
+Compiling with SSL support
+CMake Error at /usr/local/share/cmake-3.17/Modules/FindPackageHandleStandardArgs.cmake:164 (message):
+  Could NOT find OpenSSL, try to set the path to OpenSSL root folder in the
+  system variable OPENSSL_ROOT_DIR (missing: OPENSSL_CRYPTO_LIBRARY
+  OPENSSL_INCLUDE_DIR)
+Call Stack (most recent call first):
+  /usr/local/share/cmake-3.17/Modules/FindPackageHandleStandardArgs.cmake:445 (_FPHSA_FAILURE_MESSAGE)
+  /usr/local/share/cmake-3.17/Modules/FindOpenSSL.cmake:450 (find_package_handle_standard_args)
+  lib/tls/CMakeLists.txt:265 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/subramd/kivi/src/libwebsockets/build/x86_64/CMakeFiles/CMakeOutput.log".
+See also "/home/subramd/kivi/src/libwebsockets/build/x86_64/CMakeFiles/CMakeError.log".
