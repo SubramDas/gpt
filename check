@@ -1,125 +1,46 @@
- cmake -DCMAKE_INSTALL_PREFIX:PATH=$HOME/sysroots/x86_64 -DWITH_USTL=0 -DPLATFORM=X86HOST -DWITH_TESTS=0 -DWITH
-_KUPNP=1 -DWITH_NETUTIL=1 -DWITH_USB=1 -DWITH_SYSUTIL=1 ../..
--- The C compiler identification is GNU 11.4.0
--- The CXX compiler identification is GNU 11.4.0
--- Check for working C compiler: /usr/bin/cc
--- Check for working C compiler: /usr/bin/cc - works
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Detecting C compile features
--- Detecting C compile features - done
--- Check for working CXX compiler: /usr/bin/c++
--- Check for working CXX compiler: /usr/bin/c++ - works
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Detecting CXX compile features
--- Detecting CXX compile features - done
--- USTL is not being used
--- Found kivi.h at /home/subramd/sysroots/x86_64/usr/include/kivi
--- Found the kivi libraries at 
--- Found the kivi headers at /home/subramd/sysroots/x86_64/usr/include/kivi
--- KIVI Core definition found
--- Looking for pthread.h
--- Looking for pthread.h - found
--- Performing Test CMAKE_HAVE_LIBC_PTHREAD
--- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
--- Found Threads: TRUE  
--- Found kivi.h at /home/subramd/sysroots/x86_64/usr/include/kivi
--- Found the kivi libraries at 
--- Found the kivi headers at /home/subramd/sysroots/x86_64/usr/include/kivi
--- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") 
--- Checking for module 'libupnp'
---   Found libupnp, version 1.8.4
--- Found the upnp libraries at -pthread;-lupnp;-lixml
--- Found the upnp headers at /usr/include
--- upnp definitions -pthread
--- Looking for libusb-0.1
--- libusb-0.1 : not found
--- Looking for libusb-1.0
--- libusb-1.0 : found
--- Found the libusb-1.0 library path at /usr/lib/x86_64-linux-gnu
--- Found the libusb-1.0 headers at /usr/include/libusb-1.0
--- Found the libusb-1.0 library at /usr/lib/x86_64-linux-gnu/libusb-1.0.so
--- Could not find websocket
--- Configuring done
-CMake Error: The following variables are used in this project, but they are set to NOTFOUND.
-Please set them or make sure they are set and tested correctly in the CMake files:
-CCF_BASE_LIB (ADVANCED)
-    linked by target "kxframework" in directory /home/subramd/kivi/src/kxframework
-WEBSOCKET_INC_DIR (ADVANCED)
-   used as include directory in directory /home/subramd/kivi/src/kxframework
-   used as include directory in directory /home/subramd/kivi/src/kxframework
-   used as include directory in directory /home/subramd/kivi/src/kxframework
-   used as include directory in directory /home/subramd/kivi/src/kxframework
-   used as include directory in directory /home/subramd/kivi/src/kxframework
-   used as include directory in directory /home/subramd/kivi/src/kxframework
-   used as include directory in directory /home/subramd/kivi/src/kxframework
-   used as include directory in directory /home/subramd/kivi/src/kxframework/text
-   used as include directory in directory /home/subramd/kivi/src/kxframework/text
-   used as include directory in directory /home/subramd/kivi/src/kxframework/text
-   used as include directory in directory /home/subramd/kivi/src/kxframework/text
-   used as include directory in directory /home/subramd/kivi/src/kxframework/text
-   used as include directory in directory /home/subramd/kivi/src/kxframework/text
-   used as include directory in directory /home/subramd/kivi/src/kxframework/sysutils
-   used as include directory in directory /home/subramd/kivi/src/kxframework/sysutils
-   used as include directory in directory /home/subramd/kivi/src/kxframework/sysutils
-   used as include directory in directory /home/subramd/kivi/src/kxframework/sysutils
-   used as include directory in directory /home/subramd/kivi/src/kxframework/sysutils
-   used as include directory in directory /home/subramd/kivi/src/kxframework/sysutils
-   used as include directory in directory /home/subramd/kivi/src/kxframework/net
-   used as include directory in directory /home/subramd/kivi/src/kxframework/net
-   used as include directory in directory /home/subramd/kivi/src/kxframework/net
-   used as include directory in directory /home/subramd/kivi/src/kxframework/net
-   used as include directory in directory /home/subramd/kivi/src/kxframework/net
-   used as include directory in directory /home/subramd/kivi/src/kxframework/net
-   used as include directory in directory /home/subramd/kivi/src/kxframework/kupnp
-   used as include directory in directory /home/subramd/kivi/src/kxframework/kupnp
-   used as include directory in directory /home/subramd/kivi/src/kxframework/kupnp
-   used as include directory in directory /home/subramd/kivi/src/kxframework/kupnp
-   used as include directory in directory /home/subramd/kivi/src/kxframework/kupnp
-   used as include directory in directory /home/subramd/kivi/src/kxframework/kupnp
-   used as include directory in directory /home/subramd/kivi/src/kxframework/usb
-   used as include directory in directory /home/subramd/kivi/src/kxframework/usb
-   used as include directory in directory /home/subramd/kivi/src/kxframework/usb
-   used as include directory in directory /home/subramd/kivi/src/kxframework/usb
-   used as include directory in directory /home/subramd/kivi/src/kxframework/usb
-   used as include directory in directory /home/subramd/kivi/src/kxframework/usb
-   used as include directory in directory /home/subramd/kivi/src/kxframework/serial
-   used as include directory in directory /home/subramd/kivi/src/kxframework/serial
-   used as include directory in directory /home/subramd/kivi/src/kxframework/serial
-   used as include directory in directory /home/subramd/kivi/src/kxframework/serial
-   used as include directory in directory /home/subramd/kivi/src/kxframework/serial
-   used as include directory in directory /home/subramd/kivi/src/kxframework/serial
-
-CMake Warning (dev) in CMakeLists.txt:
-  Policy CMP0021 is not set: Fatal error on relative paths in
-  INCLUDE_DIRECTORIES target property.  Run "cmake --help-policy CMP0021" for
-  policy details.  Use the cmake_policy command to set the policy and
-  suppress this warning.
-
-  Found relative path while evaluating include directories of "kxframework":
-
-    "WEBSOCKET_INC_DIR-NOTFOUND"
-
-This warning is for project developers.  Use -Wno-dev to suppress it.
-
-CMake Warning (dev) in CMakeLists.txt:
-  Policy CMP0021 is not set: Fatal error on relative paths in
-  INCLUDE_DIRECTORIES target property.  Run "cmake --help-policy CMP0021" for
-  policy details.  Use the cmake_policy command to set the policy and
-  suppress this warning.
-
-  Found relative path while evaluating include directories of "kxframework":
-
-    "WEBSOCKET_INC_DIR-NOTFOUND"
-
-This warning is for project developers.  Use -Wno-dev to suppress it.
-
--- Generating done
-CMake Warning:
-  Manually-specified variables were not used by the project:
-
-    WITH_SYSUTIL
+on running make
 
 
-CMake Generate step failed.  Build files cannot be regenerated correctly.
+session.c.o
+[  9%] Building C object lib/CMakeFiles/websockets_shared.dir/tls/tls-server.c.o
+[ 10%] Building C object lib/CMakeFiles/websockets_shared.dir/tls/openssl/openssl-server.c.o
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/tls/openssl/openssl-server.c: In function ‘lws_tls_server_certs_load’:
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/tls/openssl/openssl-server.c:272:33: error: conversion from ‘long unsigned int’ to ‘int’ may change value [-Werror=conversion]
+  272 |                                 (size_t)
+      |                                 ^~~~~~~~
+  273 | #else
+      | ~~~~~                            
+  274 |                                 (int)
+      |                                 ~~~~~
+  275 | #endif
+      | ~~~~~~                           
+  276 |                                 flen, p);
+      |                                 ~~~~
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/tls/openssl/openssl-server.c:300:25: error: conversion to ‘long int’ from ‘long unsigned int’ may change the sign of the result [-Werror=sign-conversion]
+  300 |                         (size_t)
+      |                         ^~~~~~~~
+  301 | #else
+      | ~~~~~                    
+  302 |                                           (long)(long long)
+      |                                           ~~~~~~~~~~~~~~~~~
+  303 | #endif
+      | ~~~~~~                   
+  304 |                                           flen);
+      |                                           ~~~~
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/tls/openssl/openssl-server.c:309:25: error: conversion to ‘long int’ from ‘long unsigned int’ may change the sign of the result [-Werror=sign-conversion]
+  309 |                         (size_t)
+      |                         ^~~~~~~~
+  310 | #else
+      | ~~~~~                    
+  311 |                                           (long)(long long)
+      |                                           ~~~~~~~~~~~~~~~~~
+  312 | #endif
+      | ~~~~~~                   
+  313 |                                                   flen);
+      |                                                   ~~~~
+cc1: all warnings being treated as errors
+make[2]: *** [lib/CMakeFiles/websockets_shared.dir/build.make:288: lib/CMakeFiles/websockets_shared.dir/tls/openssl/openssl-server.c.o] Error 1
+make[2]: Leaving directory '/home/subramd/Desktop/kivi/src/libwebsockets/build/x86_64'
+make[1]: *** [CMakeFiles/Makefile2:1390: lib/CMakeFiles/websockets_shared.dir/all] Error 2
+make[1]: Leaving directory '/home/subramd/Desktop/kivi/src/libwebsockets/build/x86_64'
+make: *** [Makefile:180: all] Error 2
