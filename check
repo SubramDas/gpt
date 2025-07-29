@@ -1,112 +1,104 @@
-[ 27%] Building C object lib/CMakeFiles/websockets.dir/core/lws_dll2.c.o
-[ 27%] Building C object lib/CMakeFiles/websockets.dir/core/lws_map.c.o
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/tls/openssl/openssl-server.c: In function ‘lws_tls_server_certs_load’:
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/tls/openssl/openssl-server.c:272:33: error: conversion from ‘long unsigned int’ to ‘int’ may change value [-Werror=conversion]
-  272 |                                 (size_t)
-      |                                 ^~~~~~~~
-  273 | #else
-      | ~~~~~                            
-  274 |                                 (int)
-      |                                 ~~~~~
-  275 | #endif
-      | ~~~~~~                           
-  276 |                                 flen, p);
-      |                                 ~~~~
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/tls/openssl/openssl-server.c:300:25: error: conversion to ‘long int’ from ‘long unsigned int’ may change the sign of the result [-Werror=sign-conversion]
-  300 |                         (size_t)
+[ 67%] Building C object lib/CMakeFiles/websockets.dir/core-net/client/conmon.c.o
+[ 68%] Building C object lib/CMakeFiles/websockets.dir/roles/http/date.c.o
+[ 68%] Building C object lib/CMakeFiles/websockets.dir/roles/http/header.c.o
+[ 68%] Building C object lib/CMakeFiles/websockets.dir/roles/http/parsers.c.o
+[ 69%] Building C object lib/CMakeFiles/websockets.dir/roles/http/server/server.c.o
+In file included from /home/subramd/Desktop/kivi/src/libwebsockets/include/libwebsockets.h:582,
+                 from /home/subramd/Desktop/kivi/src/libwebsockets/lib/core/./private-lib-core.h:140,
+                 from /home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:31:
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c: In function ‘_lws_routing_table_dump’:
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:69:52: error: ‘struct lws_context’ has no member named ‘routing_table’
+   69 |                               lws_dll2_get_head(&cx->routing_table)) {
+      |                                                    ^~
+/home/subramd/Desktop/kivi/src/libwebsockets/include/libwebsockets/lws-dll2.h:296:25: note: in definition of macro ‘lws_start_foreach_dll’
+  296 |         ___type ___it = ___start; \
       |                         ^~~~~~~~
-  301 | #else
-      | ~~~~~                    
-  302 |                                           (long)(long long)
-      |                                           ~~~~~~~~~~~~~~~~~
-  303 | #endif
-      | ~~~~~~                   
-  304 |                                           flen);
-      |                                           ~~~~
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/tls/openssl/openssl-server.c:309:25: error: conversion to ‘long int’ from ‘long unsigned int’ may change the sign of the result [-Werror=sign-conversion]
-  309 |                         (size_t)
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c: In function ‘_lws_route_get_uidx’:
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:101:16: error: ‘struct lws_context’ has no member named ‘route_uidx’
+  101 |         if (!cx->route_uidx)
+      |                ^~
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:102:19: error: ‘struct lws_context’ has no member named ‘route_uidx’
+  102 |                 cx->route_uidx++;
+      |                   ^~
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:104:16: error: ‘struct lws_context’ has no member named ‘route_uidx’
+  104 |         ou = cx->route_uidx;
+      |                ^~
+[ 69%] Building C object lib/CMakeFiles/websockets.dir/roles/http/server/lws-spa.c.o
+In file included from /home/subramd/Desktop/kivi/src/libwebsockets/include/libwebsockets.h:582,
+                 from /home/subramd/Desktop/kivi/src/libwebsockets/lib/core/./private-lib-core.h:140,
+                 from /home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:31:
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:112:60: error: ‘struct lws_context’ has no member named ‘routing_table’
+  112 |                                       lws_dll2_get_head(&cx->routing_table)) {
+      |                                                            ^~
+/home/subramd/Desktop/kivi/src/libwebsockets/include/libwebsockets/lws-dll2.h:296:25: note: in definition of macro ‘lws_start_foreach_dll’
+  296 |         ___type ___it = ___start; \
       |                         ^~~~~~~~
-  310 | #else
-      | ~~~~~                    
-  311 |                                           (long)(long long)
-      |                                           ~~~~~~~~~~~~~~~~~
-  312 | #endif
-      | ~~~~~~                   
-  313 |                                                   flen);
-      |                                                   ~~~~
-cc1: all warnings being treated as errors
-make[2]: *** [lib/CMakeFiles/websockets.dir/build.make:288: lib/CMakeFiles/websockets.dir/tls/openssl/openssl-server.c.o] Error 1
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:115:44: error: ‘struct lws_context’ has no member named ‘route_uidx’
+  115 |                         if (rou->uidx == cx->route_uidx) {
+      |                                            ^~
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:117:35: error: ‘struct lws_context’ has no member named ‘route_uidx’
+  117 |                                 cx->route_uidx++;
+      |                                   ^~
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:118:40: error: ‘struct lws_context’ has no member named ‘route_uidx’
+  118 |                                 if (!cx->route_uidx)
+      |                                        ^~
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:119:43: error: ‘struct lws_context’ has no member named ‘route_uidx’
+  119 |                                         cx->route_uidx++;
+      |                                           ^~
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:120:39: error: ‘struct lws_context’ has no member named ‘route_uidx’
+  120 |                                 if (cx->route_uidx == ou) {
+      |                                       ^~
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:130:34: error: ‘struct lws_context’ has no member named ‘route_uidx’
+  130 |                         return cx->route_uidx++;
+      |                                  ^~
+In file included from /home/subramd/Desktop/kivi/src/libwebsockets/include/libwebsockets.h:582,
+                 from /home/subramd/Desktop/kivi/src/libwebsockets/lib/core/./private-lib-core.h:140,
+                 from /home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:31:
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c: In function ‘_lws_route_remove’:
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:138:61: error: ‘struct lws_context’ has no member named ‘routing_table’
+  138 |                               lws_dll2_get_head(&pt->context->routing_table)) {
+      |                                                             ^~
+/home/subramd/Desktop/kivi/src/libwebsockets/include/libwebsockets/lws-dll2.h:285:25: note: in definition of macro ‘lws_start_foreach_dll_safe’
+  285 |         ___type ___it = ___start; \
+      |                         ^~~~~~~~
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c: In function ‘_lws_route_table_empty’:
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:171:66: error: ‘struct lws_context’ has no member named ‘routing_table’
+  171 |                                    lws_dll2_get_head(&pt->context->routing_table)) {
+      |                                                                  ^~
+/home/subramd/Desktop/kivi/src/libwebsockets/include/libwebsockets/lws-dll2.h:285:25: note: in definition of macro ‘lws_start_foreach_dll_safe’
+  285 |         ___type ___it = ___start; \
+      |                         ^~~~~~~~
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c: In function ‘_lws_route_table_ifdown’:
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:184:66: error: ‘struct lws_context’ has no member named ‘routing_table’
+  184 |                                    lws_dll2_get_head(&pt->context->routing_table)) {
+      |                                                                  ^~
+/home/subramd/Desktop/kivi/src/libwebsockets/include/libwebsockets/lws-dll2.h:285:25: note: in definition of macro ‘lws_start_foreach_dll_safe’
+  285 |         ___type ___it = ___start; \
+      |                         ^~~~~~~~
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c: In function ‘_lws_route_est_outgoing’:
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:216:61: error: ‘struct lws_context’ has no member named ‘routing_table’
+  216 |                               lws_dll2_get_head(&pt->context->routing_table)) {
+      |                                                             ^~
+/home/subramd/Desktop/kivi/src/libwebsockets/include/libwebsockets/lws-dll2.h:296:25: note: in definition of macro ‘lws_start_foreach_dll’
+  296 |         ___type ___it = ___start; \
+      |                         ^~~~~~~~
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c: In function ‘_lws_route_find_source’:
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:275:61: error: ‘struct lws_context’ has no member named ‘routing_table’
+  275 |                               lws_dll2_get_head(&pt->context->routing_table)) {
+      |                                                             ^~
+/home/subramd/Desktop/kivi/src/libwebsockets/include/libwebsockets/lws-dll2.h:296:25: note: in definition of macro ‘lws_start_foreach_dll’
+  296 |         ___type ___it = ___start; \
+      |                         ^~~~~~~~
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c: In function ‘_lws_route_pt_close_unroutable’:
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:344:25: error: ‘struct lws_context’ has no member named ‘nl_initial_done’
+  344 |         if (!pt->context->nl_initial_done
+      |                         ^~
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c: In function ‘_lws_route_pt_close_route_users’:
+/home/subramd/Desktop/kivi/src/libwebsockets/lib/core-net/route.c:394:24: error: ‘struct lws’ has no member named ‘peer_route_uidx’
+  394 |                     wsi->peer_route_uidx == uidx) {
+      |                        ^~
+make[2]: *** [lib/CMakeFiles/websockets.dir/build.make:769: lib/CMakeFiles/websockets.dir/core-net/route.c.o] Error 1
 make[2]: *** Waiting for unfinished jobs....
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/tls/openssl/openssl-client.c: In function ‘lws_ssl_client_bio_create’:
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/tls/openssl/openssl-client.c:438:41: error: conversion from ‘long unsigned int’ to ‘int’ may change value [-Werror=conversion]
-  438 |                                         (size_t)
-      |                                         ^~~~~~~~
-  439 | #else
-      | ~~~~~                                    
-  440 |                                         (int)
-      |                                         ~~~~~
-  441 | #endif
-      | ~~~~~~                                   
-  442 |                                         size) != 1) {
-      |                                         ~~~~
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/tls/openssl/openssl-client.c:468:41: error: conversion to ‘long int’ from ‘long unsigned int’ may change the sign of the result [-Werror=sign-conversion]
-  468 |                                         (size_t)
-      |                                         ^~~~~~~~
-  469 | #else
-      | ~~~~~                                    
-  470 |                                         (int)
-      |                                         ~~~~~
-  471 | #endif
-      | ~~~~~~                                   
-  472 |                                             size) != 1 &&
-      |                                             ~~~~
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/tls/openssl/openssl-client.c:479:41: error: conversion to ‘long int’ from ‘long unsigned int’ may change the sign of the result [-Werror=sign-conversion]
-  479 |                                         (size_t)
-      |                                         ^~~~~~~~
-  480 | #else
-      | ~~~~~                                    
-  481 |                                         (int)
-      |                                         ~~~~~
-  482 | #endif
-      | ~~~~~~                                   
-  483 |                                             size) != 1) {
-      |                                             ~~~~
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/tls/openssl/openssl-client.c: In function ‘lws_tls_client_create_vhost_context’:
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/tls/openssl/openssl-client.c:1066:33: error: conversion from ‘long unsigned int’ to ‘int’ may change value [-Werror=conversion]
- 1066 |                                 (size_t)
-      |                                 ^~~~~~~~
- 1067 | #else
-      | ~~~~~                            
- 1068 |                                 (int)
-      |                                 ~~~~~
- 1069 | #endif
-      | ~~~~~~                           
- 1070 |                                 flen, p);
-      |                                 ~~~~
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/tls/openssl/openssl-client.c:1117:33: error: conversion to ‘long int’ from ‘long unsigned int’ may change the sign of the result [-Werror=sign-conversion]
- 1117 |                                 (size_t)
-      |                                 ^~~~~~~~
- 1118 | #else
-      | ~~~~~                            
- 1119 |                                 (long)(lws_intptr_t)
-      |                                 ~~~~~~~~~~~~~~~~~~~~
- 1120 | #endif
-      | ~~~~~~                           
- 1121 |                                                 flen);
-      |                                                 ~~~~
-/home/subramd/Desktop/kivi/src/libwebsockets/lib/tls/openssl/openssl-client.c:1126:33: error: conversion to ‘long int’ from ‘long unsigned int’ may change the sign of the result [-Werror=sign-conversion]
- 1126 |                                 (size_t)
-      |                                 ^~~~~~~~
- 1127 | #else
-      | ~~~~~                            
- 1128 |                                 (long)(lws_intptr_t)
-      |                                 ~~~~~~~~~~~~~~~~~~~~
- 1129 | #endif
-      | ~~~~~~                           
- 1130 |                                                 flen);
-      |                                                 ~~~~
-cc1: all warnings being treated as errors
-make[2]: *** [lib/CMakeFiles/websockets.dir/build.make:314: lib/CMakeFiles/websockets.dir/tls/openssl/openssl-client.c.o] Error 1
 make[2]: Leaving directory '/home/subramd/Desktop/kivi/src/libwebsockets/build/x86_64'
 make[1]: *** [CMakeFiles/Makefile2:1417: lib/CMakeFiles/websockets.dir/all] Error 2
 make[1]: Leaving directory '/home/subramd/Desktop/kivi/src/libwebsockets/build/x86_64'
