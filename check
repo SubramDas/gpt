@@ -1,42 +1,12 @@
-[  9%] Building C object lib/CMakeFiles/websockets_shared.dir/tls/tls-server.c.o
-[ 10%] Building C object lib/CMakeFiles/websockets_shared.dir/tls/openssl/openssl-server.c.o
-/home/subramd/kivi/src/libwebsockets/lib/tls/openssl/openssl-server.c: In function ‘lws_tls_server_certs_load’:
-/home/subramd/kivi/src/libwebsockets/lib/tls/openssl/openssl-server.c:272:33: error: conversion from ‘long unsigned int’ to ‘int’ may change value [-Werror=conversion]
-  272 |                                 (size_t)
-      |                                 ^~~~~~~~
-  273 | #else
-      | ~~~~~                            
-  274 |                                 (int)
-      |                                 ~~~~~
-  275 | #endif
-      | ~~~~~~                           
-  276 |                                 flen, p);
-      |                                 ~~~~
-/home/subramd/kivi/src/libwebsockets/lib/tls/openssl/openssl-server.c:300:25: error: conversion to ‘long int’ from ‘long unsigned int’ may change the sign of the result [-Werror=sign-conversion]
-  300 |                         (size_t)
-      |                         ^~~~~~~~
-  301 | #else
-      | ~~~~~                    
-  302 |                                           (long)(long long)
-      |                                           ~~~~~~~~~~~~~~~~~
-  303 | #endif
-      | ~~~~~~                   
-  304 |                                           flen);
-      |                                           ~~~~
-/home/subramd/kivi/src/libwebsockets/lib/tls/openssl/openssl-server.c:309:25: error: conversion to ‘long int’ from ‘long unsigned int’ may change the sign of the result [-Werror=sign-conversion]
-  309 |                         (size_t)
-      |                         ^~~~~~~~
-  310 | #else
-      | ~~~~~                    
-  311 |                                           (long)(long long)
-      |                                           ~~~~~~~~~~~~~~~~~
-  312 | #endif
-      | ~~~~~~                   
-  313 |                                                   flen);
-      |                                                   ~~~~
-cc1: all warnings being treated as errors
-make[2]: *** [lib/CMakeFiles/websockets_shared.dir/build.make:288: lib/CMakeFiles/websockets_shared.dir/tls/openssl/openssl-server.c.o] Error 1
-make[2]: Leaving directory '/home/subramd/kivi/src/libwebsockets/build/x86_64'
-make[1]: *** [CMakeFiles/Makefile2:1390: lib/CMakeFiles/websockets_shared.dir/all] Error 2
-make[1]: Leaving directory '/home/subramd/kivi/src/libwebsockets/build/x86_64'
-make: *** [Makefile:180: all] Error 2
+Traceback (most recent call last):
+  File "/usr/bin/gcovr", line 33, in <module>
+    sys.exit(load_entry_point('gcovr==5.0', 'console_scripts', 'gcovr')())
+  File "/usr/lib/python3/dist-packages/gcovr/__main__.py", line 280, in main
+    error_occurred = print_reports(covdata, options, logger)
+  File "/usr/lib/python3/dist-packages/gcovr/__main__.py", line 432, in print_reports
+    if generator(covdata, output.abspath, options):
+  File "/usr/lib/python3/dist-packages/gcovr/writer/html.py", line 401, in print_html_report
+    lines = formatter.highlighter_for_file(data['filename'])(source_file.read())
+  File "/usr/lib/python3/dist-packages/gcovr/writer/html.py", line 159, in highlighter_for_file
+    from jinja2 import Markup
+ImportError: cannot import name 'Markup' from 'jinja2' (/home/subramd/.local/lib/python3.10/site-packages/jinja2/__init__.py)
