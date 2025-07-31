@@ -1,100 +1,19 @@
-[ 30%] Building C object lib/CMakeFiles/websockets_shared.dir/core-net/state.c.o
-[ 31%] Building C object lib/CMakeFiles/websockets_shared.dir/core-net/route.c.o
-In file included from /home/subramd/kivi/src/libwebsockets/include/libwebsockets.h:582,
-                 from /home/subramd/kivi/src/libwebsockets/lib/core/./private-lib-core.h:140,
-                 from /home/subramd/kivi/src/libwebsockets/lib/core-net/route.c:31:
-/home/subramd/kivi/src/libwebsockets/lib/core-net/route.c: In function ‘_lws_routing_table_dump’:
-/home/subramd/kivi/src/libwebsockets/lib/core-net/route.c:69:52: error: ‘struct lws_context’ has no member named ‘routing_table’
-   69 |                               lws_dll2_get_head(&cx->routing_table)) {
-      |                                                    ^~
-/home/subramd/kivi/src/libwebsockets/include/libwebsockets/lws-dll2.h:296:25: note: in definition of macro ‘lws_start_foreach_dll’
-  296 |         ___type ___it = ___start; \
-      |                         ^~~~~~~~
-/home/subramd/kivi/src/libwebsockets/lib/core-net/route.c: In function ‘_lws_route_get_uidx’:
-/home/subramd/kivi/src/libwebsockets/lib/core-net/route.c:101:16: error: ‘struct lws_context’ has no member named ‘route_uidx’
-  101 |         if (!cx->route_uidx)
-      |                ^~
-/home/subramd/kivi/src/libwebsockets/lib/core-net/route.c:102:19: error: ‘struct lws_context’ has no member named ‘route_uidx’
-  102 |                 cx->route_uidx++;
-      |                   ^~
-/home/subramd/kivi/src/libwebsockets/lib/core-net/route.c:104:16: error: ‘struct lws_context’ has no member named ‘route_uidx’
-  104 |         ou = cx->route_uidx;
-      |                ^~
-In file included from /home/subramd/kivi/src/libwebsockets/include/libwebsockets.h:582,
-                 from /home/subramd/kivi/src/libwebsockets/lib/core/./private-lib-core.h:140,
-                 from /home/subramd/kivi/src/libwebsockets/lib/core-net/route.c:31:
-/home/subramd/kivi/src/libwebsockets/lib/core-net/route.c:112:60: error: ‘struct lws_context’ has no member named ‘routing_table’
-  112 |                                       lws_dll2_get_head(&cx->routing_table)) {
-      |                                                            ^~
-/home/subramd/kivi/src/libwebsockets/include/libwebsockets/lws-dll2.h:296:25: note: in definition of macro ‘lws_start_foreach_dll’
-  296 |         ___type ___it = ___start; \
-      |                         ^~~~~~~~
-/home/subramd/kivi/src/libwebsockets/lib/core-net/route.c:115:44: error: ‘struct lws_context’ has no member named ‘route_uidx’
-  115 |                         if (rou->uidx == cx->route_uidx) {
-      |                                            ^~
-/home/subramd/kivi/src/libwebsockets/lib/core-net/route.c:117:35: error: ‘struct lws_context’ has no member named ‘route_uidx’
-  117 |                                 cx->route_uidx++;
-      |                                   ^~
-/home/subramd/kivi/src/libwebsockets/lib/core-net/route.c:118:40: error: ‘struct lws_context’ has no member named ‘route_uidx’
-  118 |                                 if (!cx->route_uidx)
-      |                                        ^~
-/home/subramd/kivi/src/libwebsockets/lib/core-net/route.c:119:43: error: ‘struct lws_context’ has no member named ‘route_uidx’
-  119 |                                         cx->route_uidx++;
-      |                                           ^~
-/home/subramd/kivi/src/libwebsockets/lib/core-net/route.c:120:39: error: ‘struct lws_context’ has no member named ‘route_uidx’
-  120 |                                 if (cx->route_uidx == ou) {
-      |                                       ^~
-/home/subramd/kivi/src/libwebsockets/lib/core-net/route.c:130:34: error: ‘struct lws_context’ has no member named ‘route_uidx’
-  130 |                         return cx->route_uidx++;
-      |                                  ^~
-In file included from /home/subramd/kivi/src/libwebsockets/include/libwebsockets.h:582,
-                 from /home/subramd/kivi/src/libwebsockets/lib/core/./private-lib-core.h:140,
-                 from /home/subramd/kivi/src/libwebsockets/lib/core-net/route.c:31:
-/home/subramd/kivi/src/libwebsockets/lib/core-net/route.c: In function ‘_lws_route_remove’:
-/home/subramd/kivi/src/libwebsockets/lib/core-net/route.c:138:61: error: ‘struct lws_context’ has no member named ‘routing_table’
-  138 |                               lws_dll2_get_head(&pt->context->routing_table)) {
-      |                                                             ^~
-/home/subramd/kivi/src/libwebsockets/include/libwebsockets/lws-dll2.h:285:25: note: in definition of macro ‘lws_start_foreach_dll_safe’
-  285 |         ___type ___it = ___start; \
-      |                         ^~~~~~~~
-/home/subramd/kivi/src/libwebsockets/lib/core-net/route.c: In function ‘_lws_route_table_empty’:
-/home/subramd/kivi/src/libwebsockets/lib/core-net/route.c:171:66: error: ‘struct lws_context’ has no member named ‘routing_table’
-  171 |                                    lws_dll2_get_head(&pt->context->routing_table)) {
-      |                                                                  ^~
-/home/subramd/kivi/src/libwebsockets/include/libwebsockets/lws-dll2.h:285:25: note: in definition of macro ‘lws_start_foreach_dll_safe’
-  285 |         ___type ___it = ___start; \
-      |                         ^~~~~~~~
-/home/subramd/kivi/src/libwebsockets/lib/core-net/route.c: In function ‘_lws_route_table_ifdown’:
-/home/subramd/kivi/src/libwebsockets/lib/core-net/route.c:184:66: error: ‘struct lws_context’ has no member named ‘routing_table’
-  184 |                                    lws_dll2_get_head(&pt->context->routing_table)) {
-      |                                                                  ^~
-/home/subramd/kivi/src/libwebsockets/include/libwebsockets/lws-dll2.h:285:25: note: in definition of macro ‘lws_start_foreach_dll_safe’
-  285 |         ___type ___it = ___start; \
-      |                         ^~~~~~~~
-/home/subramd/kivi/src/libwebsockets/lib/core-net/route.c: In function ‘_lws_route_est_outgoing’:
-/home/subramd/kivi/src/libwebsockets/lib/core-net/route.c:216:61: error: ‘struct lws_context’ has no member named ‘routing_table’
-  216 |                               lws_dll2_get_head(&pt->context->routing_table)) {
-      |                                                             ^~
-/home/subramd/kivi/src/libwebsockets/include/libwebsockets/lws-dll2.h:296:25: note: in definition of macro ‘lws_start_foreach_dll’
-  296 |         ___type ___it = ___start; \
-      |                         ^~~~~~~~
-/home/subramd/kivi/src/libwebsockets/lib/core-net/route.c: In function ‘_lws_route_find_source’:
-/home/subramd/kivi/src/libwebsockets/lib/core-net/route.c:275:61: error: ‘struct lws_context’ has no member named ‘routing_table’
-  275 |                               lws_dll2_get_head(&pt->context->routing_table)) {
-      |                                                             ^~
-/home/subramd/kivi/src/libwebsockets/include/libwebsockets/lws-dll2.h:296:25: note: in definition of macro ‘lws_start_foreach_dll’
-  296 |         ___type ___it = ___start; \
-      |                         ^~~~~~~~
-/home/subramd/kivi/src/libwebsockets/lib/core-net/route.c: In function ‘_lws_route_pt_close_unroutable’:
-/home/subramd/kivi/src/libwebsockets/lib/core-net/route.c:344:25: error: ‘struct lws_context’ has no member named ‘nl_initial_done’
-  344 |         if (!pt->context->nl_initial_done
-      |                         ^~
-/home/subramd/kivi/src/libwebsockets/lib/core-net/route.c: In function ‘_lws_route_pt_close_route_users’:
-/home/subramd/kivi/src/libwebsockets/lib/core-net/route.c:394:24: error: ‘struct lws’ has no member named ‘peer_route_uidx’
-  394 |                     wsi->peer_route_uidx == uidx) {
-      |                        ^~
-make[2]: *** [lib/CMakeFiles/websockets_shared.dir/build.make:769: lib/CMakeFiles/websockets_shared.dir/core-net/route.c.o] Error 1
-make[2]: Leaving directory '/home/subramd/kivi/src/libwebsockets/build/x86_64'
-make[1]: *** [CMakeFiles/Makefile2:1390: lib/CMakeFiles/websockets_shared.dir/all] Error 2
-make[1]: Leaving directory '/home/subramd/kivi/src/libwebsockets/build/x86_64'
-make: *** [Makefile:180: all] Error 2
+[ 97%] Building CXX object tests/CMakeFiles/ccfbase-tests.dir/types_tests.cpp.o
+[100%] Linking CXX executable ccfbase-tests
+/usr/bin/ld: CMakeFiles/ccfbase-tests.dir/bluetooth_types_tests.cpp.o: in function `NetworkDeviceTest_test_Test::TestBody()':
+bluetooth_types_tests.cpp:(.text+0x1c94): undefined reference to `kivi::net::NetworkDevice::NetworkDevice(kivi::kfc::kmembuf_t&, kivi::cedc::ICEDeviceUpdateListener*)'
+/usr/bin/ld: bluetooth_types_tests.cpp:(.text+0x1ca3): undefined reference to `kivi::net::NetworkDevice::HWAddress()'
+/usr/bin/ld: bluetooth_types_tests.cpp:(.text+0x1cfe): undefined reference to `kivi::net::NetworkDevice::~NetworkDevice()'
+/usr/bin/ld: CMakeFiles/ccfbase-tests.dir/networkdevice_tests.cpp.o: in function `networkdevice_tests_shall_be_able_to_get_network_device_properties_Test::TestBody()':
+networkdevice_tests.cpp:(.text+0x2ec): undefined reference to `kivi::net::NetworkDevice::IPv4(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'
+/usr/bin/ld: networkdevice_tests.cpp:(.text+0x447): undefined reference to `kivi::net::NetworkDevice::IPv6(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'
+/usr/bin/ld: networkdevice_tests.cpp:(.text+0x9ba): undefined reference to `kivi::net::toHexString[abi:cxx11](kivi::net::_hw_addr const&)'
+/usr/bin/ld: CMakeFiles/ccfbase-tests.dir/networkdevice_tests.cpp.o: in function `networkdevice_tests::SetUp()':
+networkdevice_tests.cpp:(.text._ZN19networkdevice_tests5SetUpEv[_ZN19networkdevice_tests5SetUpEv]+0x4e): undefined reference to `kivi::net::toHWAddr(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'
+/usr/bin/ld: networkdevice_tests.cpp:(.text._ZN19networkdevice_tests5SetUpEv[_ZN19networkdevice_tests5SetUpEv]+0xd2): undefined reference to `kivi::net::NetworkDevice::NetworkDevice(kivi::net::_hw_addr, kivi::cedc::ICEDeviceUpdateListener*)'
+collect2: error: ld returned 1 exit status
+make[2]: *** [tests/CMakeFiles/ccfbase-tests.dir/build.make:330: tests/ccfbase-tests] Error 1
+make[2]: Leaving directory '/home/subramd/kivi/src/ccfbase/build/x86'
+make[1]: *** [CMakeFiles/Makefile2:329: tests/CMakeFiles/ccfbase-tests.dir/all] Error 2
+make[1]: Leaving directory '/home/subramd/kivi/src/ccfbase/build/x86'
+make: *** [Makefile:147: all] Error 2
