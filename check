@@ -1,19 +1,51 @@
-[ 97%] Building CXX object tests/CMakeFiles/ccfbase-tests.dir/types_tests.cpp.o
-[100%] Linking CXX executable ccfbase-tests
-/usr/bin/ld: CMakeFiles/ccfbase-tests.dir/bluetooth_types_tests.cpp.o: in function `NetworkDeviceTest_test_Test::TestBody()':
-bluetooth_types_tests.cpp:(.text+0x1c94): undefined reference to `kivi::net::NetworkDevice::NetworkDevice(kivi::kfc::kmembuf_t&, kivi::cedc::ICEDeviceUpdateListener*)'
-/usr/bin/ld: bluetooth_types_tests.cpp:(.text+0x1ca3): undefined reference to `kivi::net::NetworkDevice::HWAddress()'
-/usr/bin/ld: bluetooth_types_tests.cpp:(.text+0x1cfe): undefined reference to `kivi::net::NetworkDevice::~NetworkDevice()'
-/usr/bin/ld: CMakeFiles/ccfbase-tests.dir/networkdevice_tests.cpp.o: in function `networkdevice_tests_shall_be_able_to_get_network_device_properties_Test::TestBody()':
-networkdevice_tests.cpp:(.text+0x2ec): undefined reference to `kivi::net::NetworkDevice::IPv4(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'
-/usr/bin/ld: networkdevice_tests.cpp:(.text+0x447): undefined reference to `kivi::net::NetworkDevice::IPv6(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'
-/usr/bin/ld: networkdevice_tests.cpp:(.text+0x9ba): undefined reference to `kivi::net::toHexString[abi:cxx11](kivi::net::_hw_addr const&)'
-/usr/bin/ld: CMakeFiles/ccfbase-tests.dir/networkdevice_tests.cpp.o: in function `networkdevice_tests::SetUp()':
-networkdevice_tests.cpp:(.text._ZN19networkdevice_tests5SetUpEv[_ZN19networkdevice_tests5SetUpEv]+0x4e): undefined reference to `kivi::net::toHWAddr(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)'
-/usr/bin/ld: networkdevice_tests.cpp:(.text._ZN19networkdevice_tests5SetUpEv[_ZN19networkdevice_tests5SetUpEv]+0xd2): undefined reference to `kivi::net::NetworkDevice::NetworkDevice(kivi::net::_hw_addr, kivi::cedc::ICEDeviceUpdateListener*)'
-collect2: error: ld returned 1 exit status
-make[2]: *** [tests/CMakeFiles/ccfbase-tests.dir/build.make:330: tests/ccfbase-tests] Error 1
-make[2]: Leaving directory '/home/subramd/kivi/src/ccfbase/build/x86'
-make[1]: *** [CMakeFiles/Makefile2:329: tests/CMakeFiles/ccfbase-tests.dir/all] Error 2
-make[1]: Leaving directory '/home/subramd/kivi/src/ccfbase/build/x86'
-make: *** [Makefile:147: all] Error 2
+find_package(gtest)
+
+
+	include_directories(${GTEST_INC_DIR})
+# include_directories(${CMAKE_CURRENT_SOURCE_DIR}/ccfbasestub)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-exceptions")
+set(SOURCES 
+    main.cpp
+    projection_types_test.cpp
+    usbtypes_tests.cpp
+    bluetooth_types_tests.cpp
+    deviceid_tests.cpp
+    bt_conn_instance_tests.cpp
+    cedevice_tests.cpp
+     phonedevice_tests.cpp
+     btdevice_tests.cpp
+     projectiondevice_tests.cpp
+    networkdevice_tests.cpp
+    usbdevice_tests.cpp
+    mediadevice_tests.cpp
+    generichostdevice_tests.cpp
+    auxdevice_tests.cpp
+   	types_tests.cpp
+    
+    #${CMAKE_CURRENT_SOURCE_DIR}/ccfbasestub/CEDeviceStub.cpp
+)
+
+add_executable(ccfbase-tests ${SOURCES})
+add_dependencies(ccfbase-tests ccfbase)
+
+set (LIBS 
+    ${CMAKE_THREAD_LIBS_INIT} 
+    ${CMAKE_DL_LIBS} 
+    ${KIVI_CORE_LIB} 
+    ${KX_FRAMEWORK_LIB}
+    ${CCF_BASE_LIB}
+    ccfbase
+    ${GTEST_LIB}
+    rt
+    gtest 
+    pthread
+)
+
+# message(MY LIB ${LIBS})
+target_link_libraries(ccfbase-tests ${LIBS})
+install (TARGETS ccfbase-tests DESTINATION usr/bin)
+
+
+if(WITH_GCOV)
+set(LIBS ${LIBS} gcov)
+endif(WITH_GCOV)
