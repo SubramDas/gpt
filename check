@@ -19,17 +19,3 @@ make[1]: *** [CMakeFiles/Makefile2:329: tests/CMakeFiles/ccfbase-tests.dir/all] 
 make[1]: Leaving directory '/home/subramd/kivi/src/ccfbase/build/x86'
 make: *** [Makefile:147: all] Error 2,fc
 
-
-
-
-
-file(GLOB NET_INCLUDES
-	network_types.h 
-    inetworkdevice.h
-    networkdevice.h
-)
-
-# target_sources(ccfbase PRIVATE networkdevice.cpp)
-
-install (FILES ${NET_INCLUDES} DESTINATION ${KIVI_INC_DIR}/net)
-
