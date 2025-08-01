@@ -1,6 +1,2 @@
-[ 15%] Linking CXX shared library libccfbase.so
-make[2]: Leaving directory '/home/subramd/kivi/src/ccfbase/build/a'
-[ 15%] Built target ccfbase
-make[1]: *** No rule to make target '../kivi-build/all', needed by 'all'.  Stop.
-make[1]: Leaving directory '/home/subramd/kivi/src/ccfbase/build/a'
-make: *** [Makefile:147: all] Error 2
+ error: invalid use of incomplete type ‘struct UPnPEventLogger::LogEvent(Upnp_EventType, void*)::Upnp_Subscription_Request’
+  204 |                 LOG5((TEXT("UDN         =  %s\n"), sr_event->UDN));
